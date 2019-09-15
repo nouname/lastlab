@@ -24,5 +24,11 @@ script:
 after_success:
 - coveralls --root . -E ".*external.*" -E ".*tests.*"
 - build-wrapper-linux-x86-64 --out-dir bw-output make clean all
-- sonar-scanner -D"sonar.projectKey=nouname_lastlab" -D"sonar.organization=nouname-github" -D"sonar.sources=." -D"sonar.cfamily.build-wrapper-output=bw-output" -D"sonar.host.url=https://sonarcloud.io" -D"sonar.login=88d4640d0b98b73a568146a9621545c047af52ba"
+sonar-scanner \
+  -Dsonar.projectKey=nouname_Lab.1 \
+  -Dsonar.organization=nouname-github \
+  -Dsonar.sources=. \
+  -Dsonar.cfamily.build-wrapper-output=bw-output \
+  -Dsonar.host.url=https://sonarcloud.io \
+  -Dsonar.login=ccdedb6e9dc0a1070d655605dbc8a056579b3cb2
     
